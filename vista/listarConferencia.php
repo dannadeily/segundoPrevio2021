@@ -15,7 +15,6 @@ $count=count($listar);
   <body>
     <?php include "../vista/header.php" ?>
     <br>
-    <br>
 <table>
 
 
