@@ -5,7 +5,7 @@ abstract class Model{
   private static  $db_user='root';
   private static  $db_password='';
   //private static
-  protected $db_name;
+  protected static $db_name='gestionconferencia';
   private static  $db_charset='utf8';
   protected $connection;
   protected $query;
@@ -19,9 +19,9 @@ abstract class Model{
 
       //revisar que funcione la conexion
       //acomodar con las varieables ya definidas
-      $this->connection=new PDO('mysql:host=localhost;dbname=gestionconferencia','root','');
+      $this->connection=new PDO('mysql:host='.self:: $db_host.';dbname='.self::$db_name.'',self::$db_user,self::$db_password);
       $this->connection->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-      $this->connection->exec("SET CHARACTER SET UTF8");
+      $this->connection->exec("SET CHARACTER SET ".self::$db_charset."");
 
     } catch (Exception $e) {
     echo ($e->getLine());

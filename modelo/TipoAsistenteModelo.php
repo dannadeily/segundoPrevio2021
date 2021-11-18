@@ -7,9 +7,6 @@ require 'Model.php';
  */
 class TipoAsistenteModelo extends Model
 {
-  public $id;
-  public $nombre;
-  public $descripcion;
 
   function __construct()
   {
