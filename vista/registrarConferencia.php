@@ -9,7 +9,6 @@
 
     <?php include "../vista/header.php" ?>
     <br>
-    <br>
 
     <section id="container">
 
