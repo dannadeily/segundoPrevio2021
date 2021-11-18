@@ -22,6 +22,7 @@
       <th>valor inscripcion</th>
 
     </tr>
+  
 
     <?php
 
