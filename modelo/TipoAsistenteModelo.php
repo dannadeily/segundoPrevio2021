@@ -3,10 +3,13 @@ require 'Model.php';
 
 
 /**
- *
+ *faltan los get and set
  */
 class TipoAsistenteModelo extends Model
 {
+  public $id;
+  public $nombre;
+  public $descripcion;
 
   function __construct()
   {
@@ -20,7 +23,7 @@ class TipoAsistenteModelo extends Model
 
     $this->query="insert into cliente
     (nombre,apellido,direccion,telefono)values
-    ('$nombre','$apellido','$direccion','$telefono')";
+    ('$nombre','$descripcion')";
 
     $this->set_query();
   }

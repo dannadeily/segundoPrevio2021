@@ -1,3 +1,10 @@
+<?php
+require_once '../controlador/Conferencias.php';
+$conferencia=new Conferencias();
+$listar=$conferencia->listar();
+$count=count($listar);
+ ?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -25,37 +32,22 @@
       <th>valor inscripcion</th>
     </tr>
 
-
-    <?php
-
-    $conn=new mysqli("localhost","root","","gestionconferencia");
-
-    if($conn->connect_errno){
-
-      echo "no hay conexion: (". $conn->connect_errno .")".$conn->connect_error;
-    }
-
-      $sql="select * from conferencia";
-      $resultado=mysqli_query($conn,$sql);
-
-      while ($mostrar=mysqli_fetch_array($resultado))
-      {
-     ?>
+<?php for ($i=0; $i <$count ; $i++) { ?>
      <tr>
-       <td><?php echo $mostrar['id'] ?></td>
-       <td><?php echo $mostrar['nombre'] ?></td>
-       <td><?php echo $mostrar['abreviatura'] ?></td>
-       <td><?php echo $mostrar['descripcion'] ?></td>
-       <td><?php echo $mostrar['objetivo'] ?></td>
-       <td><?php echo $mostrar['fechaInicio'] ?></td>
-       <td><?php echo $mostrar['fechaFin'] ?></td>
-       <td><?php echo $mostrar['fechaPago'] ?></td>
-       <td><?php echo $mostrar['fechaEnvioArticulos'] ?></td>
-       <td><?php echo $mostrar['fechaRespuesta'] ?></td>
-       <td><?php echo $mostrar['valorInscripcion'] ?></td>
+       <td><?php echo $listar[$i]->id?></td>
+       <td><?php echo $listar[$i]->nombre ?></td>
+       <td><?php echo $listar[$i]->abreviatura ?></td>
+       <td><?php echo $listar[$i]->descripcion ?></td>
+       <td><?php echo $listar[$i]->objetivo?></td>
+       <td><?php echo $listar[$i]->fechaInicio ?></td>
+       <td><?php echo $listar[$i]->fechaFin?></td>
+       <td><?php echo $listar[$i]->fechaPago ?></td>
+       <td><?php echo $listar[$i]->fechaEnvioArticulos ?></td>
+       <td><?php echo $listar[$i]->fechaRespuesta ?></td>
+       <td><?php echo $listar[$i]->valorInscripcion ?></td>
+    </tr>
 
-     <?php } ?>
-
+<?php } ?>
      </table>
   </body>
 </html>
