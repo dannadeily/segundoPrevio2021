@@ -19,7 +19,7 @@ abstract class Model{
 
       //revisar que funcione la conexion
       //acomodar con las varieables ya definidas
-      $this->connection=new PDO('mysql:host=localhost;dbname=inventario','root','');
+      $this->connection=new PDO('mysql:host=localhost;dbname=gestionconferencia','root','');
       $this->connection->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
       $this->connection->exec("SET CHARACTER SET UTF8");
 
