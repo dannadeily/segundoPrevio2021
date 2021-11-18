@@ -14,7 +14,7 @@
 
       <div class="box2">
       <link rel="stylesheet" href="../vista/css/registrarProducto.css">
-        <h1>Registrar usuario</h1>
+        <h1>Registrar conferencia</h1>
 
       </div>
 
