@@ -1,7 +1,7 @@
 <?php
 require 'Model.php';
 
-class TipoAsistenteModelo extends Model
+class EstadoAsistenteModelo extends Model
 {
 
   function __construct()
@@ -9,39 +9,39 @@ class TipoAsistenteModelo extends Model
 
   }
   //crear
-  public function agregarTipo($tipo = array())
+  public function agregarEstado($Estado = array())
   {
-    foreach ($tipo as $key=>$datos) {
+    foreach ($Estado as $key=>$datos) {
       $$key=$datos;
       }
 
-    $this->query="insert into tipoasistente
+    $this->query="insert into estadoasistente
     (nombre,descripcion)values
     ('$nombre','$descripcion')";
 
     $this->set_query();
   }
   //eliminar
-    public function eliminarTipo($id='')
+    public function eliminarEstado($id='')
   {
-    $this->query="delete from tipoasistente where id=$id";
+    $this->query="delete from estadoasistente where id=$id";
     $this->set_query();
   }
 
 //update
-public function update($Tipo=array())
+public function update($estado=array())
 {
-  foreach ($Tipo as $key=>$datos) {
+  foreach ($estado as $key=>$datos) {
     $$key=$datos;
     }
-    $this->query="update tipoasistente set nombre='$nombre',
+    $this->query="update estadoasistente set nombre='$nombre',
     descripcion='$descripcion'
     where id=$id";
     $this->set_query();
 }
 
 public function read(){
-  $this->query="select * from tipoasistente";
+  $this->query="select * from estadoasistente";
   $this->get_query();
   $num_rows=count($this->rows);
   $data = array();
