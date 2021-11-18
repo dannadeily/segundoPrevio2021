@@ -2,9 +2,14 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="../vista/css/registrarConferencia.css">
     <title>Registrar Producto</title>
   </head>
   <body>
+
+    <?php include "../vista/header.php" ?>
+    <br>
+    <br>
 
     <section id="container">
 

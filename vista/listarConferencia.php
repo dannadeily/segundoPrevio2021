@@ -13,6 +13,9 @@ $count=count($listar);
     <title>listar conferencia</title>
   </head>
   <body>
+    <?php include "../vista/header.php" ?>
+    <br>
+    <br>
 <table>
 
 
