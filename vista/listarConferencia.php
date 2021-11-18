@@ -2,11 +2,14 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <link rel="stylesheet" href="../vista/css/listarConferencia.css">
+    <title>listar conferencia</title>
   </head>
   <body>
+<table>
 
-    <tr>  <th colspan="10"> <h1>listado de conferencia</h1> </th> </tr>
+
+    <tr>  <th colspan="11"> <h1>listado de conferencia</h1> </th> </tr>
 
     <tr>
       <th>ID</th>
@@ -20,9 +23,8 @@
       <th>fecha de enviar articulo</th>
       <th>fecha respuesta</th>
       <th>valor inscripcion</th>
-
     </tr>
-  
+
 
     <?php
 
@@ -53,5 +55,7 @@
        <td><?php echo $mostrar['valorInscripcion'] ?></td>
 
      <?php } ?>
+
+     </table>
   </body>
 </html>
