@@ -1,10 +1,6 @@
 <?php
 require 'Model.php';
 
-
-/**
- *faltan los get and set
- */
 class TipoAsistenteModelo extends Model
 {
 
@@ -12,25 +8,47 @@ class TipoAsistenteModelo extends Model
   {
 
   }
+  //crear
   public function agregarTipo($tipo = array())
   {
     foreach ($cliente as $key=>$datos) {
       $$key=$datos;
       }
 
-    $this->query="insert into cliente
-    (nombre,apellido,direccion,telefono)values
+    $this->query="insert into TipoAsistente
+    (nombre,descripcion)values
     ('$nombre','$descripcion')";
 
     $this->set_query();
   }
-  }
-  public function eliminarTipo($id='')
+  //eliminar
+    public function eliminarTipo($id='')
   {
-    $this->query="delete from categoria where id_categoria=$id_categoria";
+    $this->query="delete from TipoAsistente where id=$id";
     $this->set_query();
   }
+
+//update
+public function update($categoria_data=array())
+{
+  foreach ($categoria_data as $key=>$datos) {
+    $$key=$datos;
+    }
+    $this->query="update TipoAsistente set nombre='$nombre',
+    descripcion='$descripcion'
+    where id=$id";
+    $this->set_query();
+}
+
+public function read(){
+  $this->query="select * from TipoAsistente";
+  $this->get_query();
+  $num_rows=count($this->rows);
+  $data = array();
+  foreach ($this->rows as $datos) {
+    array_push($data,$datos );
   }
+  $return $data;
 }
 
 
