@@ -9,7 +9,7 @@
 <table>
 
 
-    <tr>  <th colspan="11"> <h1>listado de conferencia</h1> </th> </tr>
+    <tr>  <th colspan="11"> <h1>listado de conferencias</h1> </th> </tr>
 
     <tr>
       <th>ID</th>
