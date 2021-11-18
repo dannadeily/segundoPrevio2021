@@ -34,7 +34,7 @@ class ConferenciasModelo extends Model
 (nombre,abreviatura,descripcion,objetivo,fechaInicio,
 fechaFin,fechaPago,fechaEnvioArticulos,fechaRespuesta,
 valorInscripcion)
-      values($nombre,'$abreviatura','$descripcion',
+      values('$nombre','$abreviatura','$descripcion',
       '$objetivo','$fechaInicio','$fechaFin','$fechaPago',
       '$fechaEnvioArticulos','$fechaRespuesta',
       '$valorInscripcion')";
