@@ -19,13 +19,13 @@
 
       </div>
 
-        <form class="formulario" action="http://localhost/inventario/controlador/?con=productoControlador&fun=guardar" method="POST">
+        <form class="formulario" action="../controlador/?con=productoControlador&fun=registrar" method="POST">
 
           <label for="nombre">Nombre</label>
           <input type="text" name="nombre"  id="nombre" placeholder="ingrese el nombre">
 <br>
           <label for="abreviaturas">Abreviatura</label>
-          <input type="text" name="abreviaturas"  id="abreviaturas"  placeholder="ingrese abreviaturas">
+          <input type="text" name="abreviatura"  id="abreviaturas"  placeholder="ingrese abreviaturas">
 <br>
           <label for="descripcion">Descripcion</label>
           <input type="text" name="descripcion"  id="descripcion"  placeholder="descripcion">

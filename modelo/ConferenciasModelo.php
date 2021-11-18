@@ -25,6 +25,21 @@ class ConferenciasModelo extends Model
     }
     return $data;
   }
+  public function registrar($conferencia = array())
+  {
+    foreach ($conferencia as $key=>$datos) {
+      $$key=$datos;
+      }
+      $this->query="insert into conferencia
+(nombre,abreviatura,descripcion,objetivo,fechaInicio,
+fechaFin,fechaPago,fechaEnvioArticulos,fechaRespuesta,
+valorInscripcion)
+      values($nombre,'$abreviatura','$descripcion',
+      '$objetivo','$fechaInicio','$fechaFin','$fechaPago',
+      '$fechaEnvioArticulos','$fechaRespuesta',
+      '$valorInscripcion')";
+      $this->set_query();
+  }
 
 }
 
