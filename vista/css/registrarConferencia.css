@@ -1,0 +1,44 @@
+
+#container{
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border:groove;
+}
+.formulario{
+    border-radius: 15px;
+    margin-top: 123px solid red;
+     text-align: center;
+    margin: auto;
+}
+.box1{
+  border-style: groove;
+  margin:auto;
+}
+h1{
+  text-align: center;
+}
+.box2{
+
+  background-color: lightblue;
+
+}
+.box3{
+  border-radius: 15px;
+  box-shadow: 7px 13px 37px black;
+  margin-top: 123px solid red;
+  width: 700px;
+  margin: auto;
+
+}
+form{
+  background: #FFF;
+  margin: auto;
+  padding: 50px 50px;
+  border: 1px solid #d1d1d1;
+}
+label{
+  display: block;
+  font-size: 17px;
+  font-family: "GothanBook";
+  margin: 15px auto 5px auto;
+}
