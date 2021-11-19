@@ -47,6 +47,8 @@ $count=count($listar);
        <td><?php echo $listar[$i]->fechaEnvioArticulos ?></td>
        <td><?php echo $listar[$i]->fechaRespuesta ?></td>
        <td><?php echo $listar[$i]->valorInscripcion ?></td>
+       <td><a href="../controlador/?con=Conferencias&fun=delete&id=<?php echo  $listar[$i]->id ?>"><button type="button" name="button">borrar</button>           </a>  </td>
+       <td>   <a href="editarConferencia.php?id=<?php echo  $listar[$i]->id ?>">      <button type="button" name="button"> editar</button>  </a>     </td>    
     </tr>
 
 <?php } ?>
