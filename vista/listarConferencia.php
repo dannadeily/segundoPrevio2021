@@ -18,7 +18,7 @@ $count=count($listar);
 <table>
 
 
-    <tr>  <th colspan="11"> <h1>listado de conferencias</h1> </th> </tr>
+    <tr>  <th colspan="13"> <h1>listado de conferencias</h1> </th> </tr>
 
     <tr>
       <th>ID</th>
@@ -32,6 +32,8 @@ $count=count($listar);
       <th>fecha de enviar articulo</th>
       <th>fecha respuesta</th>
       <th>valor inscripcion</th>
+      <th>Borar</th>
+      <th>Editar</th>
     </tr>
 
 <?php for ($i=0; $i <$count ; $i++) { ?>
@@ -48,7 +50,7 @@ $count=count($listar);
        <td><?php echo $listar[$i]->fechaRespuesta ?></td>
        <td><?php echo $listar[$i]->valorInscripcion ?></td>
        <td><a href="../controlador/?con=Conferencias&fun=delete&id=<?php echo  $listar[$i]->id ?>"><button type="button" name="button">borrar</button>           </a>  </td>
-       <td>   <a href="editarConferencia.php?id=<?php echo  $listar[$i]->id ?>">      <button type="button" name="button"> editar</button>  </a>     </td>    
+       <td>   <a href="editarConferencia.php?id=<?php echo  $listar[$i]->id ?>">      <button type="button" name="button"> editar</button>  </a>     </td>
     </tr>
 
 <?php } ?>
