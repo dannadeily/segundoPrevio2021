@@ -12,9 +12,13 @@ class ConferenciasModelo extends Model
 
   }
 
-  public function Listar()
+  public function Listar($id="")
   {
-    $this->query="select * from Conferencia";
+    if($id!=''){
+      $this->query="select * from conferencia where id=$id";
+    }else {
+     $this->query="select * from conferencia";
+    }
     $this->get_query();
     $num_rows=count($this->rows);
     $data = array();
@@ -40,6 +44,39 @@ valorInscripcion)
       '$valorInscripcion')";
       $this->set_query();
   }
+
+
+       public function delete($id=''){
+
+         $this->query="delete from conferencia where id=$id";
+         $this->set_query();
+       }
+
+
+       public function update($conferencia=array())
+       {
+
+           // code...
+
+         foreach ($conferencia as $key=>$datos) {
+           $$key=$datos;
+           }
+           echo $id;
+           $this->query=" update conferencia set
+           nombre='$nombre',
+           abreviatura='$abreviatura',
+           descripcion='$descripcion',
+           objetivo='$objetivo',
+           fechaInicio='$fechaInicio',
+           fechaFin='$fechaFin',
+           fechaPago='$fechaPago',
+           fechaEnvioArticulos='$fechaEnvioArticulos',
+           fechaRespuesta='$fechaRespuesta',
+           valorInscripcion=$valorInscripcion
+           where id=$id ";
+           $this->set_query();
+       }
+
 
 }
 
