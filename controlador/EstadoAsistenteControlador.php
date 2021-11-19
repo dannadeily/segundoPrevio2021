@@ -1,18 +1,18 @@
 <?php
-require '../modelo/TipoAsistenteModelo.php';
+require '../modelo/EstadoAsistenteModelo.php';
 
 /**
  *
  */
 
-class TipoAsistenteControlador
+class EstadoAsistenteControlador
 {
 
   private $model;
 
   function __construct()
   {
-    $this->model=new TipoAsistenteModelo();
+    $this->model=new EstadoAsistenteModelo();
   }
   public function read($id="")
   {
@@ -23,14 +23,14 @@ class TipoAsistenteControlador
   public function agregar()
   {
     if (isset($_POST)) {
-    $tipoAsistente=array('id' =>$_POST['id'] ,
+    $estadoasistente=array('id' =>$_POST['id'] ,
     'nombre' =>$_POST['nombre'],
     'descripcion' =>$_POST['descripcion'],
     'idAsistente' =>$_POST['idAsistente']
 
     );
 
-  $this->model->agregar($tipoAsistente);
+  $this->model->agregar($estadoasistente);
   header("location:../vista/listarConferencia.php");
 }else {
 
@@ -49,16 +49,16 @@ public function eliminar($id='')
   }
 }
 
-  public function update($tipoAsistente=array()){
+  public function update($estadoasistente=array()){
     if (isset($_POST)) {
-    $tipoAsistente=array(
+    $estadoasistente=array(
       'id' =>$_POST['id'] ,
       'nombre' =>$_POST['nombre'],
       'descripcion' =>$_POST['descripcion'],
       'idAsistente' =>$_POST['idAsistente']
 
   );
-    $this->model->update($tipoAsistente);
+    $this->model->update($estadoasistente);
     header("location:../vista/listarConferencia.php");
 }else {
   header("location:../vista/listarConferencia.php");

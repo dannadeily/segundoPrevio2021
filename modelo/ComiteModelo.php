@@ -1,7 +1,7 @@
 <?php
 require 'Model.php';
 
-class ComiterModelo extends Model
+class ComiteModelo extends Model
 {
 
   function __construct()

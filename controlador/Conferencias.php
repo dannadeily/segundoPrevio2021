@@ -56,7 +56,6 @@ public function delete($id='')
 
   public function update($conferencia=array()){
     if (isset($_POST)) {
-      echo "aca entra";
     $conferencia=array(
       'id'=>$_POST['id'],
       'nombre' =>$_POST['nombre'],

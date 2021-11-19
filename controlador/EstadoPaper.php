@@ -1,18 +1,18 @@
 <?php
-require '../modelo/TipoAsistenteModelo.php';
+require '../modelo/EstadoPaperModelo.php';
 
 /**
  *
  */
 
-class TipoAsistenteControlador
+class EstadoPaperControlador
 {
 
   private $model;
 
   function __construct()
   {
-    $this->model=new TipoAsistenteModelo();
+    $this->model=new EstadoPaperModelo();
   }
   public function read($id="")
   {
@@ -23,14 +23,15 @@ class TipoAsistenteControlador
   public function agregar()
   {
     if (isset($_POST)) {
-    $tipoAsistente=array('id' =>$_POST['id'] ,
+    $estadoPaper=array('id' =>$_POST['id'] ,
     'nombre' =>$_POST['nombre'],
     'descripcion' =>$_POST['descripcion'],
-    'idAsistente' =>$_POST['idAsistente']
+    'idPaper' =>$_POST['idPaper'],
+    'idTopicoEvento' =>$_POST['idTopicoEvento']
 
     );
 
-  $this->model->agregar($tipoAsistente);
+  $this->model->agregar($estadoPaper);
   header("location:../vista/listarConferencia.php");
 }else {
 
@@ -49,16 +50,17 @@ public function eliminar($id='')
   }
 }
 
-  public function update($tipoAsistente=array()){
+  public function update($estadoPaper=array()){
     if (isset($_POST)) {
-    $tipoAsistente=array(
+    $estadoPaper=array(
       'id' =>$_POST['id'] ,
       'nombre' =>$_POST['nombre'],
       'descripcion' =>$_POST['descripcion'],
-      'idAsistente' =>$_POST['idAsistente']
+      'idPaper' =>$_POST['idPaper'],
+      'idTopicoEvento' =>$_POST['idTopicoEvento']
 
   );
-    $this->model->update($tipoAsistente);
+    $this->model->update($estadoPaper);
     header("location:../vista/listarConferencia.php");
 }else {
   header("location:../vista/listarConferencia.php");
