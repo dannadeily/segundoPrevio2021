@@ -13,9 +13,7 @@
     <section id="container">
 
       <div class="box2">
-      <link rel="stylesheet" href="../vista/css/registrarProducto.css">
         <h1>Registrar conferencia</h1>
-
       </div>
 
         <form class="formulario" action="../controlador/?con=Conferencias&fun=registrar" method="POST">
